@@ -1,0 +1,619 @@
+object FrmMaster: TFrmMaster
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 718
+  ClientWidth = 802
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 1
+    Text = 'Guilds'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Position.X = 96.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Guilds Preview'
+    OnClick = Button2Click
+  end
+  object TabControl1: TTabControl
+    Position.X = 8.000000000000000000
+    Position.Y = 43.000000000000000000
+    Size.Width = 785.000000000000000000
+    Size.Height = 662.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 40
+    TabPosition = PlatformDefault
+    Sizes = (
+      785s
+      636s
+      785s
+      636s
+      785s
+      636s
+      785s
+      636s
+      785s
+      636s)
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 55.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Canais'
+      object Label10: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 12.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000200000004000000}
+        Text = 'Canais'
+        TabOrder = 39
+      end
+      object edtPesqChannel: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 42
+        Position.X = 13.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 212.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnChangeTracking = edtPesqChannelChangeTracking
+      end
+      object gridChannels: TStringGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 13.000000000000000000
+        Position.Y = 67.000000000000000000
+        Size.Width = 739.000000000000000000
+        Size.Height = 558.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 22
+        Options = [AlternatingRowBackground, AlwaysShowEditor, ColumnResize, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellClick = gridChannelsCellClick
+        Viewport.Width = 719.000000000000000000
+        Viewport.Height = 517.000000000000000000
+      end
+      object edtChannelID: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Text = '916896279718666260'
+        Position.X = 233.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 306.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label5: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 233.000000000000000000
+        Position.Y = 12.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000200000004000000}
+        Text = 'ID do Canal'
+        TabOrder = 38
+      end
+      object Button3: TButton
+        Position.X = 547.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 205.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Listar Canais'
+        OnClick = Button3Click
+      end
+    end
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 57.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Cargos'
+      object edtRoleName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 15
+        Text = 'edtRoleName'
+        Position.X = 8.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtRoleID: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 14
+        Text = 'edtRoleID'
+        Position.X = 320.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 183.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button6: TButton
+        Position.X = 617.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 136.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Listar Cargos'
+        OnClick = Button6Click
+      end
+      object Label2: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Nome do Cargo'
+        TabOrder = 18
+      end
+      object Label3: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 320.000000000000000000
+        Position.Y = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'ID do Cargo'
+        TabOrder = 19
+      end
+      object Label1: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 72.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'ID do Membro'
+        TabOrder = 16
+      end
+      object edtMemberID: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 11
+        Position.X = 8.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 306.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button8: TButton
+        Position.X = 329.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 136.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Adicionar Cargo'
+        OnClick = Button8Click
+      end
+      object Button9: TButton
+        Position.X = 473.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 136.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 13
+        Text = 'Remover Cargo'
+        OnClick = Button9Click
+      end
+      object Button7: TButton
+        Position.X = 617.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 136.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Modificar Cargo'
+        OnClick = Button7Click
+      end
+      object Label11: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 125.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Roles'
+        TabOrder = 36
+      end
+      object edtPesqRole: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 38
+        Position.X = 8.000000000000000000
+        Position.Y = 149.000000000000000000
+        Size.Width = 212.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnChangeTracking = edtPesqRoleChangeTracking
+      end
+      object gridRoles: TStringGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 8.000000000000000000
+        Position.Y = 179.000000000000000000
+        Size.Width = 745.000000000000000000
+        Size.Height = 278.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 22
+        Options = [AlternatingRowBackground, AlwaysShowEditor, ColumnResize, ColLines, RowLines, RowSelect, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellClick = gridRolesCellClick
+        Viewport.Width = 725.000000000000000000
+        Viewport.Height = 237.000000000000000000
+      end
+      object lstRolesExcludes: TListBox
+        Position.X = 8.000000000000000000
+        Position.Y = 489.000000000000000000
+        Size.Width = 745.000000000000000000
+        Size.Height = 137.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 31
+        DisableFocusEffect = True
+        Items.Strings = (
+          'Diretoria'
+          'Bot Diretoria'
+          'Professores'
+          'Moderadores'
+          'comercial'
+          'EasyPoll'
+          'Mee6'
+          'Giveaway'
+          'Taco'
+          'Statbot'
+          'Rob'#244's'
+          'adrianosantostreinabot'
+          'teste_role_bot'
+          '@everyone')
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 725.000000000000000000
+        Viewport.Height = 133.000000000000000000
+      end
+      object Label7: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 465.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Cargos Ignorados'
+        TabOrder = 17
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Membros'
+      object Label6: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 13.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Nome do Cargo'
+        TabOrder = 17
+      end
+      object edtMemberName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Position.X = 13.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 306.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button5: TButton
+        Position.X = 535.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Search Member'
+        OnClick = Button5Click
+      end
+      object Button4: TButton
+        Position.X = 648.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Members'
+        OnClick = Button4Click
+      end
+      object Label4: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 327.000000000000000000
+        Position.Y = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Member ID'
+        TabOrder = 16
+      end
+      object edtReason: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 18
+        Position.X = 327.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object gridMembers: TStringGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 13.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 739.000000000000000000
+        Size.Height = 529.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 19
+        Options = [AlternatingRowBackground, Editing, AlwaysShowEditor, ColumnResize, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellClick = gridMembersCellClick
+        Viewport.Width = 719.000000000000000000
+        Viewport.Height = 488.000000000000000000
+      end
+      object Label12: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 71.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000200000004000000}
+        Text = 'Members'
+        TabOrder = 23
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 111.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'JSON de Retorno'
+      object memJSON: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Size.Width = 785.000000000000000000
+        Size.Height = 636.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Viewport.Width = 781.000000000000000000
+        Viewport.Height = 632.000000000000000000
+      end
+    end
+    object TabItem5: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 115.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Enviar mensagens'
+      object memoDescription: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          'Mensagem: Enviado pelo Delphi')
+        Position.X = 16.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 749.000000000000000000
+        Size.Height = 97.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Viewport.Width = 745.000000000000000000
+        Viewport.Height = 93.000000000000000000
+      end
+      object Button10: TButton
+        Position.X = 572.000000000000000000
+        Position.Y = 42.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Adiconar Mensagem no Canal'
+        OnClick = Button10Click
+      end
+      object edtContent: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 6
+        Position.X = 16.000000000000000000
+        Position.Y = 42.000000000000000000
+        Size.Width = 257.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtTitle: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Position.X = 281.000000000000000000
+        Position.Y = 42.000000000000000000
+        Size.Width = 283.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label8: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 16.000000000000000000
+        Position.Y = 17.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Content'
+        TabOrder = 19
+      end
+      object Label9: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 281.000000000000000000
+        Position.Y = 17.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Title'
+        TabOrder = 18
+      end
+      object Button11: TButton
+        Position.X = 572.000000000000000000
+        Position.Y = 177.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Enviar Mensagem Direta para Membro'
+        OnClick = Button11Click
+      end
+      object memJSONParaDirect: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          '{'
+          
+            '  "content": "**Parab'#233'ns e Seja Bem Vindo**,\nLiberamos o(s) can' +
+            'al(is) que tem direito :smirk:\n\nPor isso, voc'#234' est'#225' recebendo ' +
+            'essa mensagem.",'
+          '  "tts": false,'
+          '  "embeds": ['
+          '    {'
+          '      "title": "Canal(is) \" LIBERADO(S)\"!",'
+          '      "color": 0,'
+          
+            '      "description": "Agora voc'#234' tem acesso a <#8884516719093637' +
+            '83>, <#888451671909363783> e <#888451671909363783>. Agora '#233' post' +
+            'ar suas d'#250'vidas.",'
+          '      "timestamp": "2021-12-15T18:07:00.000Z",'
+          '      "author": {'
+          '        "name": "Adriano Santos Treinamentos"'
+          '      },'
+          '      "image": {},'
+          '      "thumbnail": {},'
+          '      "footer": {},'
+          '      "fields": []'
+          '    }'
+          '  ]'
+          '}')
+        Position.X = 16.000000000000000000
+        Position.Y = 207.000000000000000000
+        Size.Width = 749.000000000000000000
+        Size.Height = 418.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Viewport.Width = 745.000000000000000000
+        Viewport.Height = 398.000000000000000000
+      end
+      object edtMemberIDToSendMessage: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 20
+        Text = '910603016468590603'
+        Position.X = 97.000000000000000000
+        Position.Y = 177.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label13: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 16.000000000000000000
+        Position.Y = 180.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Member ID'
+        TabOrder = 16
+      end
+    end
+  end
+  object memTemp: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 60
+    Top = 257
+  end
+  object DataSource1: TDataSource
+    Left = 148
+    Top = 257
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = memTemp
+    ScopeMappings = <>
+    Left = 236
+    Top = 257
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 336
+    Top = 254
+    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      GridControl = gridRoles
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = gridChannels
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB4
+      GridControl = gridMembers
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DM.memChannels
+    ScopeMappings = <>
+    Left = 584
+    Top = 232
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DM.memRoles
+    ScopeMappings = <>
+    Left = 584
+    Top = 288
+  end
+  object BindSourceDB4: TBindSourceDB
+    DataSet = DM.memMembers
+    ScopeMappings = <>
+    Left = 584
+    Top = 344
+  end
+  object BindSourceDB5: TBindSourceDB
+    DataSet = DM.memGoogle
+    ScopeMappings = <>
+    Left = 584
+    Top = 400
+  end
+  object BindSourceDB6: TBindSourceDB
+    DataSet = DM.memSalesList
+    ScopeMappings = <>
+    Left = 584
+    Top = 176
+  end
+end
